@@ -11,7 +11,7 @@ export const Card = () => {
   const dispatch = useDispatch();
 
   const removeProduct = (id) => {
-    console.log(`going to remove Proudvtcv`, id);
+    console.log(`going to remove Prouduct ID`, id);
     dispatch(deleteProductCard(id));
   };
 
