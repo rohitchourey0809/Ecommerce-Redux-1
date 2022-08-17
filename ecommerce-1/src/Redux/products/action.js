@@ -76,7 +76,7 @@ export const getSingleProduct = (id) => (dispatch) => {
 export const addProductCardRequest = (payload) => {
   return {
     type: types.ADD_PRODUCT_CARD_REQUEST,
-    // payload,
+    payload,
   };
 };
 export const addProductCardSuccess = (payload) => {
@@ -88,7 +88,7 @@ export const addProductCardSuccess = (payload) => {
 export const addProductCardFailure = (payload) => {
   return {
     type: types.ADD_PRODUCT_CARD_FAILURE,
-    // payload,
+    payload,
   };
 };
 
