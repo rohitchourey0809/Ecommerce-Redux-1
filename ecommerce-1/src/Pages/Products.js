@@ -33,10 +33,10 @@ export const Products = () => {
   return (
     <Box>
       <Stack display={{ md: "flex" }} flexDirection={{ md: "row" }}>
-        <Box border={"2px solid green"} minWidth={"15rem"}>
+        <Box minWidth={"15rem"}>
           <FilterComponents />
         </Box>
-        <Box border={"2px solid blue"}>
+        <Box>
           <Heading>Products</Heading>
           <Flex flexWrap={"Wrap"} justifyContent={"space-around"}>
             {products.map((e) => {
