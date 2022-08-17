@@ -30,11 +30,10 @@ export const Products = () => {
     }
   }, [dispatch, products?.length, searchParams]);
 
-
   return (
     <Box>
       <Stack display={{ md: "flex" }} flexDirection={{ md: "row" }}>
-        <Box border={"2px solid green"} minWidth = {"15rem"}>
+        <Box border={"2px solid green"} minWidth={"15rem"}>
           <FilterComponents />
         </Box>
         <Box border={"2px solid blue"}>
@@ -42,15 +41,13 @@ export const Products = () => {
           <Flex flexWrap={"Wrap"} justifyContent={"space-around"}>
             {products.map((e) => {
               return (
-            
-                  <ProductSimple
-                    key={e.id}
-                    id={e.id}
-                    image={e.image}
-                    title={e.title}
-                    price={e.price}
-                  />
-            
+                <ProductSimple
+                  key={e.id}
+                  id={e.id}
+                  image={e.image}
+                  title={e.title}
+                  price={e.price}
+                />
               );
             })}
           </Flex>
@@ -60,11 +57,9 @@ export const Products = () => {
   );
 };
 
-function ProductSimple({ image, title, price,id }) {
- 
- 
+function ProductSimple({ image, title, price, id }) {
   return (
-    <Link to={`/products/${id}`}>
+    <Link to={`/Shopping/${id}`}>
       <Center py={12}>
         <Box
           role={"group"}

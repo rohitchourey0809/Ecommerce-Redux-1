@@ -24,7 +24,7 @@ export const fetchDataFailure = (payload) => {
 export const fetchData = (payload) => {
   return (dispatch) => {
     dispatch(fetchDataRequest());
-    Axios.get("/products", {
+    Axios.get("/Shopping", {
       params: {
         ...payload,
       },
@@ -61,7 +61,7 @@ export const getSingleProductFailure = (payload) => {
 
 export const getSingleProduct = (id) => (dispatch) => {
   dispatch(getSingleProductRequest());
-  Axios.get(`/products/${id}`)
+  Axios.get(`/Shopping/${id}`)
     .then((r) => {
       console.log("current productdata", r);
       dispatch(getSingleProductSuccess(r.data));
@@ -76,7 +76,7 @@ export const getSingleProduct = (id) => (dispatch) => {
 export const addProductCardRequest = (payload) => {
   return {
     type: types.ADD_PRODUCT_CARD_REQUEST,
-    payload,
+    // payload,
   };
 };
 export const addProductCardSuccess = (payload) => {
@@ -88,7 +88,7 @@ export const addProductCardSuccess = (payload) => {
 export const addProductCardFailure = (payload) => {
   return {
     type: types.ADD_PRODUCT_CARD_FAILURE,
-    payload,
+    // payload,
   };
 };
 
